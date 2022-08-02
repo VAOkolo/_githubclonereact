@@ -5,28 +5,23 @@ import { Container, Row, Col } from "react-bootstrap/";
 const UserDisplay = () => {
   return (
     <Card className="my-1 bg-dark text-light text-start ">
-      <Row className="align-items-center ">
-        <Col sm={2} className="">
+      <Row className="align-items-center flex-nowrap">
+        {/* <Col sm={2}> */}
           <Card.Img
-            className=" card-img-left example-card-img-responsive my-1 "
+            className=" d-inline card-img-left example-card-img-responsive my-1 "
             src="https://avatars.githubusercontent.com/u/67379980?s=200&v=4"
-            // style={{height:'200px',width:'200px', }}
+            style={{maxHeight:'150px',maxWidth:'150px', }}
           />
-        </Col>
-        <Col sm={8}>
-          <Card.Body>
-            <Card.Title className="mt-2">futureproof</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              Card Subtitle
-            </Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
+        {/* </Col> */}
+        {/* <Col sm={9}> */}
+          <Card.Body className="d-inline" >
+            <Card.Title className=" mt-2 fs-2">futureproof</Card.Title>
+            <i class="bi bi-link"></i>
+            <Card.Link className="mx-2 d-inline " href="http://getfutureproof.co.uk/">http://getfutureproof.co.uk/</Card.Link>
+            <i class="bi bi-envelope"></i>
+            <Card.Link className="mx-2"href="hello@getfutureproof.co.uk">hello@getfutureproof.co.uk</Card.Link>
           </Card.Body>
-        </Col>
+        {/* </Col> */}
       </Row>
     </Card>
   );

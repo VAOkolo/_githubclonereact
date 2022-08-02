@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap/";
-import { UserDisplay, RepoDisplay, People } from "../../components";
+import { UserDisplay, RepoDisplay, People, TopLanguages } from "../../components";
 
 
 const Home = () => {
@@ -18,14 +18,15 @@ const Home = () => {
       {/* This is the Second row which renders repo and people section. On small screens every column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
       <Row className="align-items-start">
         {/* display repos section */}
-        <Col sm={12} md={8}>
+        <Col sm={12} md={9} xl={10}>
           {testData.map((item) => (
             <RepoDisplay />
           ))}
         </Col>
              {/* display people section */}
-        <Col sm={12} md={4}>
+        <Col sm={12} md={3} xl={2}>
             <People />
+            <TopLanguages />
         </Col>
       </Row>
     </Container>
