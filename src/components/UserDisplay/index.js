@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap/'
 
 const UserDisplay = () => {
   return (
-    <Card className='my-5'>
+    <Card  className='my-3 bg-dark text-light text-start' border="light">
     <Card.Body>
       <Card.Title>User display info here</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
