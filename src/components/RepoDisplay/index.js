@@ -4,7 +4,7 @@ import { Badge } from 'react-bootstrap';
 
 const RepoDisplay = () => {
   return (
-    <Card  className='my-2 bg-dark text-light text-start ' border="light" >
+    <Card  className='my-2 bg-dark text-light text-start ' border="secondary" >
     <Card.Body >
       <Card.Title className='text-primary' >fp_study_notes_hello_github (name)</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">All study notes and guides for the futureproof curriculum(description)</Card.Subtitle>

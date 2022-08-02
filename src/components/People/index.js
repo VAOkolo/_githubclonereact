@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 const People = () => {
   return (
-    <Card className="my-3 bg-dark text-light text-start " border="light">
+    <Card className="my-3 bg-dark text-light text-start " border="secondary">
       <Card.Body>
         <Card.Title> People Section</Card.Title>
         <Card.Text>
