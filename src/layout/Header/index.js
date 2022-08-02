@@ -7,9 +7,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const Index = () => {
   return (
     <>
-    <Navbar  bg="dark" expand="lg" style={{borderBottom: "1px solid grey"}}>
+    <Navbar  bg="black" expand="lg" style={{borderBottom: "1px solid grey"}}>
       <Container >
-        <Navbar.Brand href="#home" className='bg-dark text-secondary text-start'><i class="bi bi-github me-3"></i>Github</Navbar.Brand>
+        <Navbar.Brand href="#home" className='bg-black text-secondary text-start'><i class="bi bi-github me-3"></i>Github</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ">

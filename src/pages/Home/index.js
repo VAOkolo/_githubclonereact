@@ -7,7 +7,7 @@ import { UserDisplay, RepoDisplay, People, TopLanguages } from "../../components
 const Home = () => {
   const testData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-black">
       {/* This is the top row */}
       <Row>
         {/* displayer user info / profile */}

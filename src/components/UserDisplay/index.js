@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap/";
 
 const UserDisplay = () => {
   return (
-    <Card className="my-1 bg-dark text-light text-start ">
+    <Card className="my-1 bg-black text-light text-start ">
       <Row className="align-items-center flex-nowrap">
         {/* <Col sm={2}> */}
           <Card.Img
