@@ -8,30 +8,23 @@ const RepoDisplay = () => {
     <Card.Body >
       <Card.Title className='text-primary' >fp_study_notes_hello_github (name)</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">All study notes and guides for the futureproof curriculum(description)</Card.Subtitle>
-      {/* <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text> */}
-
-      {/* <Card.Link href="#">Card Link</Card.Link>
-      <Card.Link href="#">Another Link</Card.Link> */}
     </Card.Body>
     <div className="mb-1 ms-2 ">
       <Badge pill bg="transparent">
       <i class="bi bi-star"></i>
-      <Card.Text className="d-inline mx-2">
+      <Card.Text className="d-inline mx-2 text-muted">
       7
       </Card.Text>
       </Badge>{' '}
       <Badge pill bg="transparent">
       <i class="bi bi-git"></i>
-      <Card.Text className="d-inline mx-2">
+      <Card.Text className="d-inline mx-2 text-muted">
       200
       </Card.Text>
       </Badge>{' '}
       <Badge pill bg="transparent">
       <i class="bi bi-record-circle"></i>
-      <Card.Text className="d-inline mx-2">
+      <Card.Text className="d-inline mx-2 text-muted">
       1 (issue needs help)
       </Card.Text>
       </Badge>{' '}

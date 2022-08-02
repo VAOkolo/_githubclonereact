@@ -16,7 +16,7 @@ const Home = () => {
         </Col>
       </Row>
       {/* This is the Second row which renders repo and people section. On small screens every column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
-      <Row>
+      <Row className="align-items-start">
         {/* display repos section */}
         <Col sm={12} md={8}>
           {testData.map((item) => (

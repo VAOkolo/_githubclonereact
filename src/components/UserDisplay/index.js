@@ -4,8 +4,8 @@ import { Container, Row, Col } from "react-bootstrap/";
 
 const UserDisplay = () => {
   return (
-    <Card className="my-1 bg-dark text-light text-start border-bottom border-secondary">
-      <Row className="align-items-center">
+    <Card className="my-1 bg-dark text-light text-start ">
+      <Row className="align-items-center ">
         <Col sm={2} className="">
           <Card.Img
             className=" card-img-left example-card-img-responsive my-1 "
