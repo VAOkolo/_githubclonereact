@@ -2,8 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Badge } from 'react-bootstrap';
 
-
-const RepoDisplay = ({fetchUserData}) => {
+const RepoDisplay = () => {
   return (
     <Card  className='my-2 bg-black text-light text-start ' border="secondary" >
     <Card.Body >
