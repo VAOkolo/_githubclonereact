@@ -41,8 +41,8 @@ const Home = () => {
       <Row className="align-items-start">
         {/* display repos section */}
         <Col sm={12} md={9} xl={10}>
-          {Object.keys(userObject).length !== 0 ? userObject.map((item) => (
-            <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={item.updated_at}/>
+          {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
+            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={item.updated_at}/>
           )) : <div>hiiiii </div>}
         </Col>
              {/* display people section */}
