@@ -8,15 +8,20 @@ import { useEffect } from "react";
 
 
 const Home = () => {
-  const githubUser = useSelector(state => state)
+
+  const name = useSelector(state => state.name);
+  const description = useSelector(state => state.description);
+  const stargazers_count = useSelector(state => state.stargazers_count);
+  const forks_count = useSelector(state => state.forks_count);
+  const open_issues = useSelector(state => state.open_issues);
+  const updated_at = useSelector(state => state.updated_at);
+
   const dispatch = useDispatch();
 
 useEffect(()=> {
 
   
 dispatch(getResult());
-
-console.log(githubUser)
 
 }, [])
 
@@ -35,7 +40,7 @@ console.log(githubUser)
         {/* display repos section */}
         <Col sm={12} md={9} xl={10}>
           {testData.map((item) => (
-            <RepoDisplay />
+            <RepoDisplay name={name} description={description} stargazers_count={stargazers_count} forks_count={forks_count} open_issues={open_issues} updated_at={updated_at}/>
           ))}
         </Col>
              {/* display people section */}

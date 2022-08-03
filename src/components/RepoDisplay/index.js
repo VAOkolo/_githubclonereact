@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 
-const RepoDisplay = () => {
+const RepoDisplay = ({name, description, stargazers_count, forks_count, open_issues, updated_at}) => {
   
 
 
@@ -35,6 +35,7 @@ const RepoDisplay = () => {
       <Card.Text className="d-inline ms-5 text-muted">
         last updated {updated_at}
       </Card.Text>
+
     </div>
   </Card>
   )
