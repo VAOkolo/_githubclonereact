@@ -35,7 +35,6 @@ const RepoDisplay = () => {
       <Card.Text className="d-inline ms-5 text-muted">
         last updated {updated_at}
       </Card.Text>
-
     </div>
   </Card>
   )
