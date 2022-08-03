@@ -33,6 +33,9 @@ export const getAPIResults = async (searchTerm) => {
     const response = await axios.get(url)
     console.log('getapiresults', response)
     const data = response.data
+    data.sort(function(a,b){
+        return new Date(b.created_at) - new Date(a.created_at)
+      })
     console.log('return api',data)
     return data;
 }
