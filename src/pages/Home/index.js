@@ -28,16 +28,16 @@ const Home = () => {
       <Row>
         {/* displayer user info / profile */}
         <Col sm={12}>
-          {/* <UserDisplay login={login} profilePhoto={profilePhoto} weblink={weblink} /> */}
+          <UserDisplay login={userObject[0].owner.login} profilePhoto={userObject[0].owner.avatar_url} weblink={userObject[0].owner.url} />
         </Col>
       </Row>
       {/* This is the Second row which renders repo and people section. On small screens every column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
       <Row className="align-items-start">
         {/* display repos section */}
         <Col sm={12} md={9} xl={10}>
-          {/* {userObject ? userObject.map((item) => (
+          {userObject.map((item) => (
             <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={item.updated_at}/>
-          )) : <div>hiiiii </div>} */}
+          )) }
         </Col>
              {/* display people section */}
         <Col sm={12} md={3} xl={2}>

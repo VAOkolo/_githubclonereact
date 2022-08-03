@@ -29,17 +29,29 @@ export const getResult = (searchTerm) => {
 };
 
 export const getAPIResults = async (searchTerm) => {
-    const url = `https://api.github.com/users/${searchTerm}/repos`
-    const response = await axios.get(url)
-    console.log('getapiresults', response)
-    const data = response.data
-    console.log('return api',data)
-    return data;
+    try{   
+        const url = `https://api.github.com/users/${searchTerm}/repos`
+        const response = await axios.get(url)
+        console.log('getapiresults', response)
+        const data = response.data
+        console.log('return api',data)
+        return data;
+
+    } catch(err){
+       
+        throw new Error(err.message)
+    }
+ 
 }
 
 export const getFollowers = async (searchTerm) => {
-const followers = `https://api.github.com/users/${searchTerm}/followers`
-    const response = await axios.get(followers)
-    const data = response.data
-    return data;
+    try{
+        const followers = `https://api.github.com/users/${searchTerm}/followers`
+        const response = await axios.get(followers)
+        const data = response.data
+        return data;
+    }catch(err){
+        throw new Error(err.message)
+    }
+
 }

@@ -1,6 +1,7 @@
 const initState = {
     userObject: {},
-    followers: []
+    followers: [], 
+    error: false
 }
 
 const githubReducer = (state=initState, action) => {
@@ -10,15 +11,15 @@ const githubReducer = (state=initState, action) => {
         case 'LOAD_RESULT':
             return {
                 ...state, 
-                userObject: action.payload,
+                userObject: action.payload, error: false,
              }
         case 'LOAD_FOLLOWERS':
             return {
                 ...state, 
-                followers: action.payload,
-                };
-        // case 'SET_ERROR':
-        //     return { ...state, error: action.payload, loading: false }
+                followers: action.payload, error: false,
+                }
+        case 'SET_ERROR':
+            return { ...state, error: action.payload,  }
         default: 
             return state;
     };
