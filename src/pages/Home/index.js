@@ -11,6 +11,10 @@ const Home = () => {
 
   const userObject = useSelector(state => state.userObject);
 
+  const login = userObject[0].owner.login
+  const profilephoto = userObject[0].owner.avatar_url
+  const weblink = userObject[0].owner.url
+
   const dispatch = useDispatch();
 
   useEffect(()=> {
@@ -24,7 +28,7 @@ const Home = () => {
       <Row>
         {/* displayer user info / profile */}
         <Col sm={12}>
-          <UserDisplay />
+          <UserDisplay login={login} profilephoto={profilephoto} weblink={weblink} />
         </Col>
       </Row>
       {/* This is the Second row which renders repo and people section. On small screens every column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
