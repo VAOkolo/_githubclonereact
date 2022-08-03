@@ -2,14 +2,14 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap/";
 
-const UserDisplay = ({login, profilephoto, weblink}) => {
+const UserDisplay = ({login, profilePhoto, weblink}) => {
   return (
     <Card className="my-1 bg-black text-light text-start ">
       <Row className="align-items-center flex-nowrap">
         {/* <Col sm={2}> */}
           <Card.Img
             className=" d-inline card-img-left example-card-img-responsive my-1 "
-            src={`${profilephoto}`}
+            src={`${profilePhoto}`}
             style={{maxHeight:'150px',maxWidth:'150px', }}
           />
         {/* </Col> */}

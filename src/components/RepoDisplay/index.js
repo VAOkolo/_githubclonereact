@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Badge } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
 
 const RepoDisplay = ({name, description, stargazers_count, forks_count, open_issues, updated_at}) => {
   
