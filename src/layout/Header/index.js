@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useDispatch } from 'react-redux';
+import { getFollowers, getResult } from '../../actions';
 
 const Index = () => {
+  const [ searchTerm, setSearchTerm ] = useState("")
+const dispatch = useDispatch();
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+console.log('i am event value', searchTerm)
+  dispatch(getResult(searchTerm))
+  dispatch(getFollowers(searchTerm))
+}
+const updateInput = e => {
+  e.preventDefault()
+  const input = e.target.value 
+  setSearchTerm(input)
+}
+  // useEffect(()=> {
+
+  // }, [])
   return (
     <>
     <Navbar  bg="black" expand="lg" style={{borderBottom: "1px solid grey"}}>
@@ -28,6 +47,10 @@ const Index = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <form onSubmit={handleSubmit}>
+          <input type="text"  value={searchTerm} onChange={updateInput}/>
+          <button type="submit"> submit</button>
+        </form>
       </Container>
     </Navbar>
     </>
