@@ -2,9 +2,19 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap/";
 import { UserDisplay, RepoDisplay, People, TopLanguages } from "../../components";
-
+import { useState, useEffect } from 'react'
+import  getResult  from "../../actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
+
+  const name = useSelector(state => state.name)
+
+  useEffect(() => {
+    getResult()
+    console.log(name)
+  },[name])
+  
   const testData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     <Container fluid className="bg-black">
