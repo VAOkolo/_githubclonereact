@@ -5,8 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const RepoDisplay = ({name, description, stargazers_count, forks_count, open_issues, updated_at}) => {
   
-
-
   return (
     <Card  className='my-2 bg-black text-light text-start ' border="secondary" >
     <Card.Body >

@@ -1,12 +1,5 @@
 const initState = {
-    name: "",
-    description: "",
-    stargazers_count: "",
-    forks_count: "",
-    open_issues: "",
-    updated_at: "",
-    // loading: false,
-    // error: false,
+    userObject: {}
 }
 
 const githubReducer = (state=initState, action) => {
@@ -14,16 +7,10 @@ const githubReducer = (state=initState, action) => {
         // case 'LOADING':
         //     return { ...state, location: action.payload, loading: true };
         case 'LOAD_RESULT':
-            console.log('i am in load result')
+            console.log('i am in load result', action.payload)
             return {
                 ...state, 
-                name: action.payload.name,
-                description: action.payload.description,
-                stargazers_count: action.payload.stargazers_count,
-                forks_count: action.payload.forks_count,
-                open_issues: action.payload.open_issues,
-                updated_at: action.payload.updated_at,
-
+                userObject: action.payload,
              };
         // case 'SET_ERROR':
         //     return { ...state, error: action.payload, loading: false }
