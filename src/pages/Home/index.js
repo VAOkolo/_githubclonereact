@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Container, Row, Col } from 'react-bootstrap/'
 import {UserDisplay, RepoDisplay } from '../../components'
+import fetchUserData from '../../actions';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
 
     {/* displayer user info / profile */}
     <Col sm={12}>
-    <UserDisplay />
+    <UserDisplay fetchUserData={fetchUserData}/>
     </Col>
 
 

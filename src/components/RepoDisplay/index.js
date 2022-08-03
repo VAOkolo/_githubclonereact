@@ -1,7 +1,8 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
-const RepoDisplay = () => {
+
+const RepoDisplay = ({fetchUserData}) => {
   return (
     <Card  className='my-2'>
     <Card.Body>

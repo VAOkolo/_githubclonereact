@@ -1,8 +1,14 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Container, Row, Col } from 'react-bootstrap/'
+import { useEffect } from 'react'
 
-const UserDisplay = () => {
+const UserDisplay = ({fetchUserData}) => {
+
+  useEffect(() => {
+    fetchUserData()
+  },[])
+
   return (
     <Card className='my-5'>
     <Card.Body>
@@ -14,8 +20,10 @@ const UserDisplay = () => {
       </Card.Text>
       <Card.Link href="#">Card Link</Card.Link>
       <Card.Link href="#">Another Link</Card.Link>
+      <p>{fetchUserData}</p>
     </Card.Body>
   </Card>
+    
   )
 }
 
