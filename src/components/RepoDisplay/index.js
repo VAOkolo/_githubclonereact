@@ -4,12 +4,7 @@ import { Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 
 const RepoDisplay = () => {
-  const name = useSelector(state => state.name);
-  const description = useSelector(state => state.description);
-  const stargazers_count = useSelector(state => state.stargazers_count);
-  const forks_count = useSelector(state => state.forks_count);
-  const open_issues = useSelector(state => state.open_issues);
-  const updated_at = useSelector(state => state.updated_at);
+  
 
 
   return (
