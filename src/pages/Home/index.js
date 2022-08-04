@@ -43,7 +43,7 @@ const Home = () => {
         {/* display repos section */}
         <Col sm={12} md={9} xl={9}>
           {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
-            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} 
+            <RepoDisplay key={item.id} name={item.name} description={item.description} 
             stargazers_count={item.stargazers_count} forks_count={item.forks_count} 
             open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} 
             htmlUrl={item.html_url}/>
