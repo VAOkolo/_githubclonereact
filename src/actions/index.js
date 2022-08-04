@@ -12,19 +12,25 @@ const loadFollowers = (data) => ({
     payload: data
 });
 
+const loadUserInfo = (data) => ({
+    type: 'LOAD_USERINFO',
+    payload: data
+});
+
 export const getResult = (searchTerm) => {
-    console.log('*****getresults')
     return async dispatch => {
        dispatch(loading(searchTerm)) 
-       console.log('loading....')
         try{
         const data = await getAPIResults(searchTerm)
         const followers = await getFollowers(searchTerm)
+        const userInfo = await getUserInfo(searchTerm)
         dispatch(loadResult(data))
         dispatch(loadFollowers(followers))
+        dispatch(loadUserInfo(userInfo))
      
         } catch (err){
             console.warn(err.message);
+            dispatch({ type: 'SET_ERROR', payload: err.message })
         }
     }
 };
@@ -36,7 +42,6 @@ export const getAPIResults = async (searchTerm) => {
     data.sort(function(a,b){
         return new Date(b.created_at) - new Date(a.created_at)
       })
-    console.log('return api',data)
     return data;
 }
 
@@ -47,3 +52,10 @@ const followers = `https://api.github.com/users/${searchTerm}/followers`
     return data;
 }
 
+export const getUserInfo = async (searchTerm) => {
+    const followers = `https://api.github.com/users/${searchTerm}`
+        const response = await axios.get(followers)
+        const data = response.data
+        return data;
+    }
+    

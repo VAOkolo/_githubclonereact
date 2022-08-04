@@ -1,6 +1,6 @@
 *{
 margin: 0;
-background-color: black;
+background-color: #0D1117
 }
 
 .searchDiv{
@@ -15,8 +15,35 @@ background-color: black;
     text-align: center;
 }
 
+.githubTitle > h1 {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+/* .searchBar {
+    margin-right: 20px;
+    border-style: none;
+    border-radius: 50px;
+} */
+
+
+  
+/* 
 .footer{
-    position:absolute;
-    bottom:0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(235, 195, 64);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+} */
+
+.searchBar{
+    color: white;
+}
+
+.searchButton{
+    color: white;
 }
 

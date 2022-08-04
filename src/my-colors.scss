@@ -1,0 +1,317 @@
+
+/*------------------------------------
+- COLOR black
+------------------------------------*/
+
+$black_t1: #0D1117;
+$black_t2: #000000;
+$black_t3: #465b7c;
+$black_t4: #4f678c;
+$black_t5: #000000;
+$black_t6: #000000;
+$black_t7: #000000;
+$black_t8: #000000;
+$black_t9: #567199;
+
+$black_shadow: rgba(13, 17, 23, 0.5);
+$black_text_color_dark_bright: #fff;
+
+
+.alert-black {
+  color: $black_t5;
+  background-color: $black_t9;
+  border-color: $black_t4;
+}
+
+.alert-black hr {
+  border-top-color: $black_t3;
+}
+
+.alert-black .alert-link {
+  color: $black_t8;
+}
+
+.badge-black {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t1;
+}
+
+.badge-black[href]:hover, .badge-black[href]:focus {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t2;
+}
+
+.bg-black {
+  background-color: $black_t1 !important;
+}
+
+a.bg-black:hover, a.bg-black:focus,
+button.bg-black:hover,
+button.bg-black:focus {
+  background-color: $black_t2 !important;
+}
+
+.border-black {
+  border-color: $black_t1 !important;
+}
+
+.btn-black {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t1;
+  border-color: $black_t1;
+}
+
+.btn-black:hover {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t7;
+  border-color: $black_t2;
+}
+
+.btn-black:focus, .btn-black.focus {
+  box-shadow: 0 0 0 0.2rem $black_shadow;
+}
+
+.btn-black.disabled, .btn-black:disabled {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t1;
+  border-color: $black_t1;
+}
+
+.btn-black:not(:disabled):not(.disabled):active, .btn-black:not(:disabled):not(.disabled).active, .show > .btn-black.dropdown-toggle {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t2;
+  border-color: $black_t6;
+}
+
+.btn-black:not(:disabled):not(.disabled):active:focus, .btn-black:not(:disabled):not(.disabled).active:focus, .show > .btn-black.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $black_shadow;
+}
+
+.btn-outline-black {
+  color: $black_t1;
+  background-color: transparent;
+  border-color: $black_t1;
+}
+
+.btn-outline-black:hover {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t1;
+  border-color: $black_t1;
+}
+
+.btn-outline-black:focus, .btn-outline-black.focus {
+  box-shadow: 0 0 0 0.2rem $black_shadow;
+}
+
+.btn-outline-black.disabled, .btn-outline-black:disabled {
+  color: $black_t1;
+  background-color: transparent;
+}
+
+.btn-outline-black:not(:disabled):not(.disabled):active, .btn-outline-black:not(:disabled):not(.disabled).active, .show > .btn-outline-black.dropdown-toggle {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t1;
+  border-color: $black_t1;
+}
+
+.btn-outline-black:not(:disabled):not(.disabled):active:focus, .btn-outline-black:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-black.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $black_shadow;
+}
+
+.list-group-item-black {
+  color: $black_t5;
+  background-color: $black_t4;
+}
+
+.list-group-item-black.list-group-item-action:hover, .list-group-item-black.list-group-item-action:focus {
+  color: $black_t5;
+  background-color: $black_t3;
+}
+
+.list-group-item-black.list-group-item-action.active {
+  color: $black_text_color_dark_bright;
+  background-color: $black_t5;
+  border-color: $black_t5;
+}
+
+.table-black,
+.table-black > th,
+.table-black > td {
+  background-color: $black_t4;
+}
+
+.table-hover .table-black:hover {
+  background-color: $black_t3;
+}
+
+.table-hover .table-black:hover > td,
+.table-hover .table-black:hover > th {
+  background-color: $black_t3;
+}
+
+.text-black {
+  color: $black_t1 !important;
+}
+
+a.text-black:hover, a.text-black:focus {
+  color: $black_t2 !important;
+}
+
+
+/*------------------------------------
+- COLOR dark
+------------------------------------*/
+
+$dark_t1: #141920;
+$dark_t2: #000000;
+$dark_t3: #465b7c;
+$dark_t4: #4f678c;
+$dark_t5: #000000;
+$dark_t6: #000000;
+$dark_t7: #000000;
+$dark_t8: #000000;
+$dark_t9: #567199;
+
+$dark_shadow: rgba(13, 17, 23, 0.5);
+$dark_text_color_dark_bright: #fff;
+
+
+.alert-dark {
+  color: $dark_t5;
+  background-color: $dark_t9;
+  border-color: $dark_t4;
+}
+
+.alert-dark hr {
+  border-top-color: $dark_t3;
+}
+
+.alert-dark .alert-link {
+  color: $dark_t8;
+}
+
+.badge-dark {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t1;
+}
+
+.badge-dark[href]:hover, .badge-dark[href]:focus {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t2;
+}
+
+.bg-dark {
+  background-color: $dark_t1 !important;
+}
+
+a.bg-dark:hover, a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: $dark_t2 !important;
+}
+
+.border-dark {
+  border-color: $dark_t1 !important;
+}
+
+.btn-dark {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t1;
+  border-color: $dark_t1;
+}
+
+.btn-dark:hover {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t7;
+  border-color: $dark_t2;
+}
+
+.btn-dark:focus, .btn-dark.focus {
+  box-shadow: 0 0 0 0.2rem $dark_shadow;
+}
+
+.btn-dark.disabled, .btn-dark:disabled {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t1;
+  border-color: $dark_t1;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t2;
+  border-color: $dark_t6;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $dark_shadow;
+}
+
+.btn-outline-dark {
+  color: $dark_t1;
+  background-color: transparent;
+  border-color: $dark_t1;
+}
+
+.btn-outline-dark:hover {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t1;
+  border-color: $dark_t1;
+}
+
+.btn-outline-dark:focus, .btn-outline-dark.focus {
+  box-shadow: 0 0 0 0.2rem $dark_shadow;
+}
+
+.btn-outline-dark.disabled, .btn-outline-dark:disabled {
+  color: $dark_t1;
+  background-color: transparent;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.dropdown-toggle {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t1;
+  border-color: $dark_t1;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $dark_shadow;
+}
+
+.list-group-item-dark {
+  color: $dark_t5;
+  background-color: $dark_t4;
+}
+
+.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
+  color: $dark_t5;
+  background-color: $dark_t3;
+}
+
+.list-group-item-dark.list-group-item-action.active {
+  color: $dark_text_color_dark_bright;
+  background-color: $dark_t5;
+  border-color: $dark_t5;
+}
+
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: $dark_t4;
+}
+
+.table-hover .table-dark:hover {
+  background-color: $dark_t3;
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: $dark_t3;
+}
+
+.text-dark {
+  color: $dark_t1 !important;
+}
+
+a.text-dark:hover, a.text-dark:focus {
+  color: $dark_t2 !important;
+}

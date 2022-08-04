@@ -1,13 +1,15 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Routes, Route } from 'react-router-dom'
-import { Home } from './pages'
+import { Home, Lander } from './pages'
 import Layout from './layout';
 import { useSelector } from 'react-redux';
 import { Spinner } from './components';
 
-
+import './App.css';
+import './App.scss';
+import './my-colors.scss'
+import './App.scss'
 
 
 
@@ -23,8 +25,9 @@ console.log('app pageloading value',loading )
 
     <Routes> 
       <Route path='/' element={<Layout />}>  
-          <Route path='/' element={<Home />} />
-          <Route path='*' element={<Home />} />
+          <Route path="/" element={<Lander />} />
+          <Route path='/searched' element={<Home />} />
+          <Route path='*' element={<Lander />} />
       </Route>
     </Routes> 
 
