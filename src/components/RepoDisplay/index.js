@@ -2,19 +2,22 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Badge } from 'react-bootstrap';
 
-const RepoDisplay = ({name, description, stargazers_count, forks_count, open_issues, updated_at}) => {
+const RepoDisplay = ({name, description, stargazers_count, forks_count, open_issues, updated_at, htmlUrl}) => {
   
   return (
     <Card  className='my-2 bg-black text-light text-start ' border="secondary" >
     <Card.Body >
-      <Card.Title className='text-primary' >{name}</Card.Title>
+    <Card.Link href={htmlUrl}>
+           <Card.Title className='text-primary' >{name}</Card.Title>
+</Card.Link>
+     
       <Card.Subtitle className="mb-2 text-muted">{description}</Card.Subtitle>
     </Card.Body>
     <div className="mb-1 ms-2 ">
       <Badge pill bg="transparent">
       <i class="bi bi-star"></i>
       <Card.Text className="d-inline mx-2 text-muted">
-      7 {stargazers_count }
+       {stargazers_count }
       </Card.Text>
       </Badge>{' '}
       <Badge pill bg="transparent">

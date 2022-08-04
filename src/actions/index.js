@@ -1,7 +1,4 @@
-
 import axios from 'axios'
-
-
 
 const loadResult = (data) => ({
     type: 'LOAD_RESULT',
@@ -46,3 +43,4 @@ const followers = `https://api.github.com/users/${searchTerm}/followers`
     const data = response.data
     return data;
 }
+
