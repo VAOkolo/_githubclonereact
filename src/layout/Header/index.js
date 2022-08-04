@@ -12,6 +12,7 @@ const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
   const landerStatus = useSelector(state => state.lander)
+  const error = useSelector(state => state.error)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,7 +76,10 @@ const Index = () => {
                 Submit
               </Button>
               </Form.Group>
+                    {error && <div className="bg-dark text-muted"> Sorry, no repo's found!</div>}
                 </Form> : ""}
+          
+
 
           {/* <form onSubmit={handleSubmit}>
             <input type="text" value={searchTerm} onChange={updateInput} />

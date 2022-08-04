@@ -8,6 +8,7 @@ import { Spinner } from './components';
 
 import './App.css';
 import './my-colors.scss'
+import './App.scss'
 
 
 
@@ -25,7 +26,7 @@ console.log('app pageloading value',loading )
       <Route path='/' element={<Layout />}>  
           <Route path="/" element={<Lander />} />
           <Route path='/searched' element={<Home />} />
-          <Route path='*' element={<Home />} />
+          <Route path='*' element={<Lander />} />
       </Route>
     </Routes> 
 
