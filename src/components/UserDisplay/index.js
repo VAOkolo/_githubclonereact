@@ -15,7 +15,10 @@ const UserDisplay = ({login, profilePhoto, weblink}) => {
             <Card.Title className=" mt-2 fs-2">{login}</Card.Title>
             <Card.Title className=" mt-2 fs-8">Repos 8</Card.Title>
             <i class="bi bi-link"></i>
-            <Card.Link className="mx-2 d-inline " href={`${weblink}`}>{weblink}</Card.Link>
+            <Card.Link className="mx-2 d-inline" 
+            target="_blank"
+           rel="noreferrer" 
+           href={`${weblink}`}>{weblink}</Card.Link>
             <i class="bi bi-envelope"></i>
             <Card.Link className="mx-2"href="hello@getfutureproof.co.uk">hello@getfutureproof.co.uk</Card.Link>
           </Card.Body>

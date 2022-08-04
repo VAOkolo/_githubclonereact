@@ -11,7 +11,7 @@ import { timeSince, dateTransformer} from '../../helpers/helpers'
 const Home = () => {
 
   const userObject = useSelector(state => state.userObject);
-  const extraUserData = useSelector(state => state.userData);
+  const extraUserData = useSelector(state => state.userInfo);
   const loading = useSelector(state => state.loading);
   const followers = useSelector(state => state.followers);
 
@@ -41,9 +41,9 @@ const Home = () => {
         {/* display repos section */}
         <Col sm={12} md={9} xl={9}>
           {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
-            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} htmlUrl={weblink}/>
+            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} htmlUrl={extraUserData.html_url}/>
           )) : <Error />}
-  
+  <div className="mb-5"> </div>
         </Col>
              {/* display people section */}
         <Col className="d-inlineflex justify-content-center" sm={12} md={3} xl={3}>

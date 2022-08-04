@@ -27,6 +27,11 @@ const githubReducer = (state=initState, action) => {
                 ...state, 
                 userInfo: action.payload, loading: false
                 };
+        case 'SET_SEARCH':
+            return {
+                ...state, 
+                searchTerm: action.payload
+                };
         // case 'SET_ERROR':
         //     return { ...state, error: action.payload, loading: false }
         default: 
