@@ -6,7 +6,7 @@ const Footer = () => {
     <>
       <Container fluid>
         <Row>
-          <Col className="d-flex bg-black text-secondary footer" sm={12}>
+          <Col className="d-flex fixed-bottom bg-black text-secondary footer" sm={12}>
          
               <i class="bi bi-github me-3"></i>
               <p className="d-inline">© 2022 GitHub, Inc.</p>
