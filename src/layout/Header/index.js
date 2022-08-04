@@ -28,29 +28,29 @@ const Index = () => {
   }, []);
   return (
     <>
-      <Navbar bg="black" expand="lg" style={{ borderBottom: "1px solid grey" }}>
-        <Container>
+      <Navbar className="bg-dark" bg="dark" expand="lg" style={{ borderBottom: "1px solid grey" }}>
+        <Container   className="bg-dark">
           <Navbar.Brand
             href="#home"
-            className="bg-black text-secondary text-start"
+            className="bg-dark text-secondary text-start"
           >
             <i class="bi bi-github me-3"></i>Github
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto ">
-              <Nav.Link className="text-light" href="#home">
+          <Navbar.Toggle  className="bg-dark" aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse  className="bg-dark" id="basic-navbar-nav">
+            <Nav className="me-auto bg-dark">
+              <Nav.Link className="text-light bg-dark" href="#home">
                 Home
               </Nav.Link>
-              <Nav.Link className="text-light" href="#link">
+              <Nav.Link className="text-light bg-dark" href="#link">
                 Link
               </Nav.Link>
-              <NavDropdown
-                className="text-light"
+              {/* <NavDropdown
+                className="text-light bg-dark"
                 title="More Actions"
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item className="text-light" href="#action/3.1">
+                <NavDropdown.Item className="text-light bg-dark" href="#action/3.1">
                   Action
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -63,11 +63,11 @@ const Index = () => {
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
-        <Form onSubmit={handleSubmit}>
-              <Form.Group className="d-flex mt-2 me-5 pe-5" controlId="formSearch">
+        <Form  className="bg-dark" onSubmit={handleSubmit}>
+              <Form.Group className="d-flex bg-dark mt-2 me-5 pe-5" controlId="formSearch">
         <Form.Control  onChange={updateInput} value={searchTerm} type="text" placeholder="Enter github username" />
         <Button className="ms-3" variant="dark" type="submit">
         Submit
