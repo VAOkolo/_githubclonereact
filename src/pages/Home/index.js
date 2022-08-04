@@ -33,15 +33,20 @@ const Home = () => {
         {/* displayer user info / profile */}
         <Col sm={12}>
         { Object.keys(userObject).length !== 0 ?
-          <UserDisplay login={login} profilePhoto={profilePhoto} weblink={weblink} repocount={extraUserData.public_repos} /> : <div> </div>}
+          <UserDisplay login={login} profilePhoto={profilePhoto} weblink={weblink} 
+          repocount={extraUserData.public_repos} /> : <div> </div>}
         </Col>
       </Row>
-      {/* This is the Second row which renders repo and people section. On small screens every column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
+      {/* This is the Second row which renders repo and people section. On small screens every 
+      column is 12units wide - so effectively a row -  but on medium and above they will break into columns*/}
       <Row className="align-items-start">
         {/* display repos section */}
         <Col sm={12} md={9} xl={9}>
           {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
-            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} htmlUrl={item.html_url}/>
+            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} 
+            stargazers_count={item.stargazers_count} forks_count={item.forks_count} 
+            open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} 
+            htmlUrl={item.html_url}/>
           )) : <Error />}
   <div className="mb-5"> </div>
         </Col>
@@ -63,7 +68,6 @@ const Home = () => {
     <>
    {  loading ? <Spin /> :  mainContent()}
     </>
-
   );
 };
 

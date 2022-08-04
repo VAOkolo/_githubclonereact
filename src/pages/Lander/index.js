@@ -36,6 +36,7 @@ const Lander = () => {
   }, []);
 
   return (
+
     <Container fluid>
       <Row>
         <Col sm={12}>
@@ -69,6 +70,7 @@ const Lander = () => {
           </Col>
         </Col>
       </Row>
+
     </Container>
   );
 };

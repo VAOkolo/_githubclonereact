@@ -44,9 +44,9 @@ const Index = () => {
               <Nav.Link className="text-light bg-dark" href="#home">
                 Home
               </Nav.Link>
-              <Nav.Link className="text-light bg-dark" href="#link">
+              {/* <Nav.Link className="text-light bg-dark" href="#link">
                 Link
-              </Nav.Link>
+              </Nav.Link> */}
               {/* <NavDropdown
                 className="text-light bg-dark"
                 title="More Actions"
