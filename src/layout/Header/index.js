@@ -6,10 +6,14 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useDispatch } from "react-redux";
 import { getFollowers, getResult } from "../../actions";
+import { useSelector } from 'react-redux'
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
+
+  const landerStatus = useSelector(state => state.lander)
+  console.log(landerStatus)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,20 +70,21 @@ const Index = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-        <Form onSubmit={handleSubmit}>
-              <Form.Group className="d-flex mt-2 me-5 pe-5" controlId="formSearch">
-        <Form.Control  onChange={updateInput} value={searchTerm} type="text" placeholder="Enter github username" />
-        <Button className="ms-3" variant="dark" type="submit">
-        Submit
-      </Button>
-      </Form.Group>
-        </Form>
+          { landerStatus ?
+              <Form onSubmit={handleSubmit}>
+                    <Form.Group className="d-flex mt-2 me-5 pe-5" controlId="formSearch">
+              <Form.Control  onChange={updateInput} value={searchTerm} type="text" placeholder="Enter github username" />
+              <Button className="ms-3" variant="dark" type="submit">
+              Submit
+            </Button> </Form.Group>
+          </Form>: ""}
       
 
-          {/* <form onSubmit={handleSubmit}>
-            <input type="text" value={searchTerm} onChange={updateInput} />
-            <button type="submit"> submit</button>
-          </form> */}
+           {/* { <form onSubmit={handleSubmit}>
+             <input type="text" value={searchTerm} onChange={updateInput} />
+             <button type="submit"> submit</button>
+           </form> } */}
+
         </Container>
       </Navbar>
     </>

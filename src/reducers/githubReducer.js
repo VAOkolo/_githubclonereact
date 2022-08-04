@@ -3,7 +3,8 @@ const initState = {
     followers: [],
     userInfo:{},
     loading: false,
-    searchTerm: ''
+    searchTerm: '',
+    lander: false
 }
 
 const githubReducer = (state=initState, action) => {
@@ -14,7 +15,7 @@ const githubReducer = (state=initState, action) => {
         case 'LOAD_RESULT':
             return {
                 ...state, 
-                userObject: action.payload, loading: false
+                userObject: action.payload, loading: false, lander: true
              }
         case 'LOAD_FOLLOWERS':
             console.log('loadging followers in reducer', state.loading)
