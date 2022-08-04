@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { Spinner } from './components';
 
 import './App.css';
+import './App.scss';
 import './my-colors.scss'
 
 

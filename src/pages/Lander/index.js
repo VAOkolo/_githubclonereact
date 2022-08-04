@@ -43,7 +43,7 @@ const Lander = () => {
        </div>
        <div className="bar">
          <form onSubmit={handleSubmit}>
-         <input onChange={updateInput} className="searchBar" type="text" title="Search" value={searchTerm}></input>
+         <input onChange={updateInput} className="searchBar" type="search" title="Search" value={searchTerm}></input>
          <button className="searchButton">Search</button>
          </form>
        </div>

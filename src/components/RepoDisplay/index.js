@@ -10,7 +10,7 @@ const RepoDisplay = ({name, description, stargazers_count, forks_count, open_iss
     <Card.Link             target="_blank"
            rel="noreferrer" href={htmlUrl}>
            <Card.Title className='text-primary' >{name}</Card.Title>
-</Card.Link>
+    </Card.Link>
      
       <Card.Subtitle className="mb-2 text-muted">{description}</Card.Subtitle>
     </Card.Body>
