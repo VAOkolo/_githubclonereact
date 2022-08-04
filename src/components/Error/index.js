@@ -6,6 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getFollowers, getResult } from "../../actions";
+import { Lander } from '../../pages';
 
 const Error = () => {
   
@@ -57,7 +58,7 @@ const Error = () => {
   return (
     <Container fluid >
  <Row>
- <Col sm={12}>
+ {/* <Col sm={12}>
    <Col sm={12} className='my-2 bg-black text-light text-start ' border="secondary">
    <div className="searchDiv">
        <div className="githubTitle">
@@ -71,8 +72,8 @@ const Error = () => {
        </div>
      </div>
   </Col>
- </Col>
- 
+ </Col> */}
+ <Lander />
  </Row>
   
     </Container>
