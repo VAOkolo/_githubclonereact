@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 import { Badge, Image } from "react-bootstrap/";
 
-const People = () => {
+const People = ({followers}) => {
   const testData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
   return (
@@ -13,11 +13,11 @@ const People = () => {
 
       </Card.Body>
       <div>
-        {testData.map((item) => (
+        {followers.map((item) => (
           <Badge className="m-0 px-0" bg="transparent" border="transparent" variant="info" >
             <Image
               roundedCircle={true}
-              src="https://avatars.githubusercontent.com/u/18289187?s=70&v=4"
+              src={`${item.avatar_url}`}
               style={{ height: "30px", width: "30px" }}
             />
           </Badge> 

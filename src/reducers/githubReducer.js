@@ -1,5 +1,7 @@
 const initState = {
-    userObject: {}
+    userObject: {},
+    followers: [],
+    userInfo:{}
 }
 
 const githubReducer = (state=initState, action) => {
@@ -7,11 +9,20 @@ const githubReducer = (state=initState, action) => {
         // case 'LOADING':
         //     return { ...state, location: action.payload, loading: true };
         case 'LOAD_RESULT':
-            console.log('i am in load result', action.payload)
             return {
                 ...state, 
                 userObject: action.payload,
-             };
+             }
+        case 'LOAD_FOLLOWERS':
+            return {
+                ...state, 
+                followers: action.payload,
+                };
+        case 'LOAD_USERINFO':
+            return {
+                ...state, 
+                userInfo: action.payload,
+                };
         // case 'SET_ERROR':
         //     return { ...state, error: action.payload, loading: false }
         default: 
