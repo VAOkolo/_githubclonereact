@@ -6,10 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useDispatch } from "react-redux";
 import { getFollowers, getResult } from "../../actions";
+import { useSelector } from 'react-redux'
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
+  const landerStatus = useSelector(state => state.lander)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +38,6 @@ const Index = () => {
           >
             <i class="bi bi-github me-3"></i>Github
           </Navbar.Brand>
-          <Navbar.Toggle  className="bg-dark" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse  className="bg-dark" id="basic-navbar-nav">
             <Nav className="me-auto bg-dark">
               <Nav.Link className="text-light bg-dark" href="#home">
@@ -66,15 +67,15 @@ const Index = () => {
               </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
-        <Form  className="bg-dark" onSubmit={handleSubmit}>
-              <Form.Group className="d-flex bg-dark mt-2 me-5 pe-5" controlId="formSearch">
-        <Form.Control  onChange={updateInput} value={searchTerm} type="text" placeholder="Enter github username" />
-        <Button className="ms-3" variant="dark" type="submit">
-        Submit
-      </Button>
-      </Form.Group>
-        </Form>
-      
+          { landerStatus ?
+                <Form  className="bg-dark" onSubmit={handleSubmit}>
+                      <Form.Group className="d-flex bg-dark mt-2 me-5 pe-5" controlId="formSearch">
+                <Form.Control  onChange={updateInput} value={searchTerm} type="text" placeholder="Enter github username" />
+                <Button className="ms-3" variant="dark" type="submit">
+                Submit
+              </Button>
+              </Form.Group>
+                </Form> : ""}
 
           {/* <form onSubmit={handleSubmit}>
             <input type="text" value={searchTerm} onChange={updateInput} />
