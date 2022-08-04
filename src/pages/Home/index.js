@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap/";
-import { UserDisplay, RepoDisplay, People, TopLanguages, Error } from "../../components";
+import { UserDisplay, RepoDisplay, People, TopLanguages, Error, Spin } from "../../components";
 import { useSelector } from 'react-redux';
 import { timeSince, dateTransformer} from '../../helpers/helpers'
 // import { getFollowers, getResult } from '../../actions';
@@ -12,11 +12,8 @@ const Home = () => {
 
   const userObject = useSelector(state => state.userObject);
   const extraUserData = useSelector(state => state.userData);
-  console.log('extra user data',extraUserData)
-  // console.log('i am the user object in the the home pagae', userObject)
+  const loading = useSelector(state => state.loading);
   const followers = useSelector(state => state.followers);
-  // console.log('userobject', userObject);
-  // console.log('home pagae followers', followers);
 
   let login = ""
   let profilePhoto = ""
@@ -28,10 +25,9 @@ const Home = () => {
     weblink = userObject[0].owner.url
   }
     
-
-
-  return (
-    <Container fluid className="bg-black">
+  const mainContent = () => {
+    return (
+      <Container fluid className="bg-black">
       {/* This is the top row */}
       <Row>
         {/* displayer user info / profile */}
@@ -45,12 +41,13 @@ const Home = () => {
         {/* display repos section */}
         <Col sm={12} md={9} xl={9}>
           {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
-            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))}/>
+            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} htmlUrl={weblink}/>
           )) : <Error />}
   
         </Col>
              {/* display people section */}
         <Col className="d-inlineflex justify-content-center" sm={12} md={3} xl={3}>
+
        { Object.keys(userObject).length !== 0 ?
             <People followers={followers}/> : <div> </div> }
           { Object.keys(userObject).length !== 0 ?
@@ -58,6 +55,15 @@ const Home = () => {
         </Col>
       </Row>
     </Container>
+    )
+    
+  }
+ 
+  return (
+    <>
+   {  loading ? <Spin /> :  mainContent()}
+    </>
+
   );
 };
 

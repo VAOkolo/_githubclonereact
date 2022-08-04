@@ -5,11 +5,18 @@ import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages'
 import Layout from './layout';
 import { useSelector } from 'react-redux';
+import { Spinner } from './components';
+
+
 
 
 
 function App() {
   const userObject = useSelector(state => state.userObject);
+  const loading = useSelector(state => state.loading);
+
+
+console.log('app pageloading value',loading )
 
   return (
     <div className="App">
