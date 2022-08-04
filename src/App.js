@@ -1,4 +1,3 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Routes, Route } from 'react-router-dom'
@@ -7,7 +6,8 @@ import Layout from './layout';
 import { useSelector } from 'react-redux';
 import { Spinner } from './components';
 
-
+import './App.css';
+import './my-colors.scss'
 
 
 

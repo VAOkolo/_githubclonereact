@@ -7,7 +7,8 @@ const RepoDisplay = ({name, description, stargazers_count, forks_count, open_iss
   return (
     <Card  className='my-2 bg-black text-light text-start ' border="secondary" >
     <Card.Body >
-    <Card.Link href={htmlUrl}>
+    <Card.Link             target="_blank"
+           rel="noreferrer" href={htmlUrl}>
            <Card.Title className='text-primary' >{name}</Card.Title>
 </Card.Link>
      
