@@ -2,3 +2,21 @@
 margin: 0;
 background-color: black;
 }
+
+.searchDiv{
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.githubTitle{
+    color: white;
+    text-align: center;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+}
+
