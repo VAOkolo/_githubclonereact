@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap/";
 import { UserDisplay, RepoDisplay, People, TopLanguages, Error } from "../../components";
 import { useSelector } from 'react-redux';
+import { timeSince, dateTransformer} from '../../helpers/helpers'
 // import { getFollowers, getResult } from '../../actions';
 // import { useEffect } from "react";
 
@@ -44,8 +45,9 @@ const Home = () => {
         {/* display repos section */}
         <Col sm={12} md={9} xl={9}>
           {Object.keys(userObject).length !== 0 ? userObject.map((item,i) => (
-            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={item.updated_at} htmlUrl={item.html_url}/>
-          )) : <Error /> }
+            i < 10 && <RepoDisplay key={item.id} name={item.name} description={item.description} stargazers_count={item.stargazers_count} forks_count={item.forks_count} open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))}/>
+          )) : <Error />}
+  
         </Col>
              {/* display people section */}
         <Col className="d-inlineflex justify-content-center" sm={12} md={3} xl={3}>
