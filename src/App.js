@@ -4,18 +4,21 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages'
 import Layout from './layout';
+import { useSelector } from 'react-redux';
 
 
 
 function App() {
+  const userObject = useSelector(state => state.userObject);
+
   return (
     <div className="App">
 
     <Routes> 
       <Route path='/' element={<Layout />}>  
           <Route path='/' element={<Home />} />
+          <Route path='*' element={<Home />} />
       </Route>
-   
     </Routes> 
 
     </div>
