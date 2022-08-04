@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+const loading = searchTerm => ({ type: 'LOADING', payload: searchTerm });
+
 const loadResult = (data) => ({
     type: 'LOAD_RESULT',
     payload: data
@@ -11,11 +13,13 @@ const loadFollowers = (data) => ({
 });
 
 export const getResult = (searchTerm) => {
+    console.log('*****getresults')
     return async dispatch => {
+       dispatch(loading(searchTerm)) 
+       console.log('loading....')
         try{
         const data = await getAPIResults(searchTerm)
         const followers = await getFollowers(searchTerm)
-        console.log('getresults ',data)
         dispatch(loadResult(data))
         dispatch(loadFollowers(followers))
      
@@ -28,7 +32,6 @@ export const getResult = (searchTerm) => {
 export const getAPIResults = async (searchTerm) => {
     const url = `https://api.github.com/users/${searchTerm}/repos`
     const response = await axios.get(url)
-    console.log('getapiresults', response)
     const data = response.data
     data.sort(function(a,b){
         return new Date(b.created_at) - new Date(a.created_at)
