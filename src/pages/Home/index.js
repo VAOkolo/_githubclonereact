@@ -12,6 +12,7 @@ const Home = () => {
 
   const userObject = useSelector(state => state.userObject);
   const extraUserData = useSelector(state => state.userInfo);
+
   const loading = useSelector(state => state.loading);
   const followers = useSelector(state => state.followers);
 
@@ -27,7 +28,7 @@ const Home = () => {
     
   const mainContent = () => {
     return (
-      <Container fluid className="bg-black">
+      <Container  className=" bg-black">
       {/* This is the top row */}
       <Row>
         {/* displayer user info / profile */}
@@ -46,7 +47,7 @@ const Home = () => {
             <RepoDisplay key={item.id} name={item.name} description={item.description} 
             stargazers_count={item.stargazers_count} forks_count={item.forks_count} 
             open_issues={item.open_issues} updated_at={timeSince(dateTransformer(item.updated_at))} 
-            htmlUrl={item.html_url}/>
+            htmlUrl={item.html_url} language={item.language}/>
           )) : <Error />}
   <div className="mb-5"> </div>
         </Col>

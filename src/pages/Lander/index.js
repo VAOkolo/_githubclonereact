@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Figure, Image, Row } from "react-bootstrap";
+import { Col, Container, Figure, Image, Row, Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Lander = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const error = useSelector(state => state.error)
+  const error = useSelector((state) => state.error);
 
   const dispatch = useDispatch();
 
@@ -29,14 +29,11 @@ const Lander = () => {
     setSearchTerm(input);
   };
 
-
-
   useEffect(() => {
     // setSearchTerm("github");
   }, []);
 
   return (
-
     <Container fluid>
       <Row>
         <Col sm={12}>
@@ -61,16 +58,21 @@ const Lander = () => {
                       onChange={updateInput}
                       value={searchTerm}
                     />
-                     {error && <div className="bg-dark text-muted"> Sorry, no repo's found!</div>}
                   </div>
-                 
                 </form>
               </div>
+              <Col sm={12} className="mt-2 ms-5  ">
+                {error && (
+                  <div className=" bg-black text-muted">
+                    {" "}
+                    Sorry, no repo's found!
+                  </div>
+                )}
+              </Col>
             </div>
           </Col>
         </Col>
       </Row>
-
     </Container>
   );
 };
